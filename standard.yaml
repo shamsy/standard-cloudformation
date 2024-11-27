@@ -69,7 +69,7 @@ Resources:
     Properties:
       VpcId: !Ref VPC
       CidrBlock: !Ref PublicSubnetparam1
-      AvailabilityZone: ap-south-1a
+      AvailabilityZone: us-east-1a
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
@@ -81,7 +81,7 @@ Resources:
       VpcId: !Ref VPC
       CidrBlock: !Ref PrivateSubnetparam1
       MapPublicIpOnLaunch: false
-      AvailabilityZone: ap-south-1a
+      AvailabilityZone: us-east-1a
       Tags:
         - Key: Name
           Value: Private Subnet 1
@@ -91,7 +91,7 @@ Resources:
     Properties:
       VpcId: !Ref VPC
       CidrBlock: !Ref PublicSubnetparam2
-      AvailabilityZone: ap-south-1b
+      AvailabilityZone: us-east-1b
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
@@ -102,7 +102,7 @@ Resources:
     Properties:
       VpcId: !Ref VPC
       CidrBlock: !Ref PrivateSubnetparam2
-      AvailabilityZone: ap-south-1b
+      AvailabilityZone: us-east-1b
       MapPublicIpOnLaunch: false
       Tags:
         - Key: Name
@@ -184,7 +184,7 @@ Resources:
     Properties:
       ImageId: !Ref AmazonLinuxAMIID
       InstanceType: m5a.large
-      AvailabilityZone: ap-south-1a
+      AvailabilityZone: us-east-1a
       SecurityGroupIds:
         - !Ref EC2SecurityGroup
       SubnetId: !Ref PrivateSubnet1
@@ -313,7 +313,7 @@ Resources:
       Type: AWS::RDS::DBInstance
       Properties:
           DBInstanceIdentifier: BizCom247
-          AvailabilityZone: ap-south-1a
+          AvailabilityZone: us-east-1a
           AllocatedStorage: 100
           DBInstanceClass: db.r5.large
           Engine: "MYSQL"
